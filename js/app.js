@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // Load all notes
     for (let object of doc.HitObjects) {
-        const start = (object.StartTime);
+        const start = (object.StartTime) * spacing;
         // Check if note is long
         if(object.EndTime !== undefined) {
-            const end = object.EndTime;
+            const end = object.EndTime * spacing;
             const longNote = drawLongNote(object.Lane, positions['lane' + (5 - object.Lane)], start, end);
             notes.addChild(longNote);
         } else {
@@ -59,12 +59,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let started = true;
 
     document.addEventListener('keydown', function (key) {
-        if(key.code === "Space") {
-            if(started) {
-                app.ticker.stop();
-            }
-            else app.ticker.start();
-            started = !started;
+        switch (key.code) {
+            case "Space":
+                if(started) {
+                    app.ticker.stop();
+                }
+                else app.ticker.start();
+                started = !started;
+                break;
+            case "F3":
+                scrollSpeed -= 1;
+                break;
+            case "F4":
+                scrollSpeed += 1;
+                break;
+            case "F5":
+                location.reload();
+                break;
         }
+        key.preventDefault();
     });
 });

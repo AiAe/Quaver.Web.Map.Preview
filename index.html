@@ -36,8 +36,8 @@
         lane4: (noteSize.width * 3) - (borderSize * 2)
     }
 
-    const scrollSpeed = 6;
-    const spacing = 2;
+    const scrollSpeed = 8;
+    const spacing = 1;
 
     const longNoteAlpha = 0.5;
 
@@ -45,7 +45,9 @@
 </script>
 
 <script src="./plugins/js-yaml.min.js"></script>
-<script src="./js/qua_longnotes.js"></script>
+<script>
+    let doc = <%- resp %>;
+</script>
 <script src="./plugins/pixi.min.js"></script>
 <script src="./objects/PlayField.js"></script>
 <script src="./objects/PlayFieldBorders.js"></script>

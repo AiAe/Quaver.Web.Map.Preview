@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quaver Map Preview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #202225;
+        }
+
+        canvas {
+            display: block;
+            margin: 0 auto;
+            /*transform: rotate(180deg);*/
+            /*-webkit-transform: scaleX(-1);*/
+            /*transform: scaleX(-1);*/
+        }
+    </style>
+</head>
+
+<script>
+    // Global settings
+
+    const noteSize = {
+        width: 512 / 4,
+        height: 192 / 4
+    }
+
+    const borderSize = 2;
+
+    const positions = {
+        lane1: borderSize,
+        lane2: noteSize.width,
+        lane3: (noteSize.width * 2) - borderSize,
+        lane4: (noteSize.width * 3) - (borderSize * 2)
+    }
+
+    const scrollSpeed = 6;
+    const spacing = 2;
+</script>
+
+<script src="./js/js-yaml.min.js"></script>
+<script src="./js/qua_longnotes.js"></script>
+<script src="./js/pixi.js"></script>
+<script src="./objects/PlayField.js"></script>
+<script src="./objects/PlayFieldBorders.js"></script>
+<script src="./objects/Note.js"></script>
+<script src="./objects/LongNote.js"></script>
+<body>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,553 @@
+AudioFile: audio.mp3
+SongPreviewTime: -1
+BackgroundFile: stressed_out.png
+MapId: 36
+MapSetId: 20
+Mode: Keys4
+Title: Stressed Out (Tomsize Remix)
+Artist: twenty one pilots
+Source: ''
+Tags: ''
+Creator: Leikas
+DifficultyName: Normal
+Description: This is a Quaver converted version of Leikas's map.
+TimingPoints:
+  - StartTime: 11443
+    Bpm: 85
+SliderVelocities: []
+HitObjects:
+  - StartTime: 148
+    Lane: 1
+  - StartTime: 1560
+    Lane: 2
+  - StartTime: 2972
+    Lane: 3
+  - StartTime: 4384
+    Lane: 2
+  - StartTime: 5090
+    Lane: 1
+  - StartTime: 5795
+    Lane: 4
+  - StartTime: 7207
+    Lane: 1
+  - StartTime: 8619
+    Lane: 4
+  - StartTime: 10031
+    Lane: 4
+  - StartTime: 10737
+    Lane: 2
+  - StartTime: 11443
+    Lane: 3
+  - StartTime: 12148
+    Lane: 2
+  - StartTime: 12148
+    Lane: 1
+  - StartTime: 12737
+    Lane: 3
+  - StartTime: 12854
+    Lane: 4
+  - StartTime: 13560
+    Lane: 2
+  - StartTime: 13560
+    Lane: 1
+  - StartTime: 14266
+    Lane: 4
+  - StartTime: 14972
+    Lane: 2
+  - StartTime: 14972
+    Lane: 3
+  - StartTime: 15560
+    Lane: 1
+  - StartTime: 15678
+    Lane: 2
+  - StartTime: 16031
+    Lane: 3
+  - StartTime: 16384
+    Lane: 1
+  - StartTime: 16384
+    Lane: 2
+  - StartTime: 16737
+    Lane: 3
+  - StartTime: 17090
+    Lane: 4
+  - StartTime: 17795
+    Lane: 2
+  - StartTime: 17795
+    Lane: 1
+  - StartTime: 18384
+    Lane: 4
+  - StartTime: 18501
+    Lane: 3
+  - StartTime: 18854
+    Lane: 2
+  - StartTime: 19207
+    Lane: 3
+  - StartTime: 19207
+    Lane: 4
+  - StartTime: 19913
+    Lane: 4
+  - StartTime: 20619
+    Lane: 2
+  - StartTime: 20619
+    Lane: 1
+  - StartTime: 21207
+    Lane: 4
+  - StartTime: 21325
+    Lane: 3
+  - StartTime: 21678
+    Lane: 2
+  - StartTime: 22031
+    Lane: 3
+  - StartTime: 22031
+    Lane: 4
+  - StartTime: 22737
+    Lane: 4
+  - StartTime: 23090
+    Lane: 1
+  - StartTime: 23442
+    Lane: 3
+  - StartTime: 23442
+    Lane: 4
+  - StartTime: 23795
+    Lane: 1
+  - StartTime: 24016
+    Lane: 4
+  - StartTime: 24148
+    Lane: 3
+  - StartTime: 24501
+    Lane: 1
+  - StartTime: 24854
+    Lane: 3
+  - StartTime: 24854
+    Lane: 4
+  - StartTime: 25207
+    Lane: 1
+  - StartTime: 25560
+    Lane: 3
+  - StartTime: 25913
+    Lane: 1
+  - StartTime: 26266
+    Lane: 4
+  - StartTime: 26266
+    Lane: 3
+  - StartTime: 26619
+    Lane: 1
+  - StartTime: 26840
+    Lane: 4
+  - StartTime: 26972
+    Lane: 3
+  - StartTime: 27325
+    Lane: 2
+  - StartTime: 27678
+    Lane: 3
+  - StartTime: 27678
+    Lane: 4
+  - StartTime: 27898
+    Lane: 2
+  - StartTime: 28031
+    Lane: 1
+  - StartTime: 28384
+    Lane: 4
+  - StartTime: 28737
+    Lane: 1
+  - StartTime: 29090
+    Lane: 2
+  - StartTime: 29090
+    Lane: 3
+  - StartTime: 29442
+    Lane: 1
+  - StartTime: 29663
+    Lane: 4
+  - StartTime: 29795
+    Lane: 3
+  - StartTime: 30148
+    Lane: 2
+  - StartTime: 30501
+    Lane: 3
+  - StartTime: 30501
+    Lane: 4
+  - StartTime: 30854
+    Lane: 1
+  - StartTime: 31207
+    Lane: 4
+  - StartTime: 31560
+    Lane: 1
+  - StartTime: 31913
+    Lane: 3
+  - StartTime: 31913
+    Lane: 4
+  - StartTime: 32266
+    Lane: 1
+  - StartTime: 32487
+    Lane: 4
+  - StartTime: 32619
+    Lane: 3
+  - StartTime: 32972
+    Lane: 2
+  - StartTime: 33325
+    Lane: 3
+  - StartTime: 33325
+    Lane: 4
+  - StartTime: 33678
+    Lane: 1
+  - StartTime: 34031
+    Lane: 4
+  - StartTime: 34384
+    Lane: 1
+  - StartTime: 34737
+    Lane: 4
+  - StartTime: 34737
+    Lane: 3
+  - StartTime: 35090
+    Lane: 1
+  - StartTime: 35310
+    Lane: 4
+  - StartTime: 35442
+    Lane: 3
+  - StartTime: 35795
+    Lane: 1
+  - StartTime: 36148
+    Lane: 3
+  - StartTime: 36148
+    Lane: 2
+  - StartTime: 36501
+    Lane: 1
+  - StartTime: 36854
+    Lane: 4
+  - StartTime: 37207
+    Lane: 1
+  - StartTime: 37560
+    Lane: 3
+  - StartTime: 37560
+    Lane: 2
+  - StartTime: 38134
+    Lane: 4
+  - StartTime: 38266
+    Lane: 3
+  - StartTime: 38619
+    Lane: 2
+  - StartTime: 38972
+    Lane: 3
+  - StartTime: 38972
+    Lane: 4
+  - StartTime: 39325
+    Lane: 1
+  - StartTime: 39678
+    Lane: 4
+  - StartTime: 40207
+    Lane: 3
+  - StartTime: 40384
+    Lane: 2
+  - StartTime: 40384
+    Lane: 1
+  - StartTime: 40781
+    Lane: 4
+  - StartTime: 41090
+    Lane: 3
+  - StartTime: 41795
+    Lane: 1
+  - StartTime: 41795
+    Lane: 2
+  - StartTime: 42016
+    Lane: 3
+  - StartTime: 42148
+    Lane: 4
+  - StartTime: 42501
+    Lane: 4
+  - StartTime: 44619
+    Lane: 3
+  - StartTime: 44619
+    Lane: 4
+  - StartTime: 44972
+    Lane: 1
+  - StartTime: 45325
+    Lane: 4
+  - StartTime: 45854
+    Lane: 3
+  - StartTime: 46031
+    Lane: 2
+  - StartTime: 46031
+    Lane: 1
+  - StartTime: 46428
+    Lane: 4
+  - StartTime: 46737
+    Lane: 3
+  - StartTime: 47442
+    Lane: 1
+  - StartTime: 47442
+    Lane: 2
+  - StartTime: 47663
+    Lane: 3
+  - StartTime: 47795
+    Lane: 4
+  - StartTime: 48148
+    Lane: 4
+  - StartTime: 50972
+    Lane: 4
+  - StartTime: 51942
+    Lane: 1
+  - StartTime: 52075
+    Lane: 2
+  - StartTime: 52251
+    Lane: 3
+  - StartTime: 52428
+    Lane: 4
+    EndTime: 52737
+  - StartTime: 52737
+    Lane: 3
+    EndTime: 53090
+  - StartTime: 53090
+    Lane: 4
+    EndTime: 53619
+  - StartTime: 54854
+    Lane: 1
+  - StartTime: 55075
+    Lane: 2
+  - StartTime: 55251
+    Lane: 3
+  - StartTime: 55560
+    Lane: 4
+    EndTime: 55913
+  - StartTime: 55913
+    Lane: 3
+    EndTime: 56619
+  - StartTime: 56619
+    Lane: 2
+    EndTime: 57325
+  - StartTime: 57678
+    Lane: 4
+  - StartTime: 57854
+    Lane: 3
+  - StartTime: 58031
+    Lane: 2
+    EndTime: 58384
+  - StartTime: 58384
+    Lane: 1
+  - StartTime: 58737
+    Lane: 3
+    EndTime: 59442
+  - StartTime: 59442
+    Lane: 4
+    EndTime: 62266
+  - StartTime: 62266
+    Lane: 1
+    EndTime: 62972
+  - StartTime: 63678
+    Lane: 4
+    EndTime: 64384
+  - StartTime: 65090
+    Lane: 1
+    EndTime: 65795
+  - StartTime: 66501
+    Lane: 4
+    EndTime: 67207
+  - StartTime: 67913
+    Lane: 3
+    EndTime: 68619
+  - StartTime: 69325
+    Lane: 2
+    EndTime: 70031
+  - StartTime: 70737
+    Lane: 3
+    EndTime: 71442
+  - StartTime: 72148
+    Lane: 2
+    EndTime: 72854
+  - StartTime: 73560
+    Lane: 4
+    EndTime: 74266
+  - StartTime: 74972
+    Lane: 1
+    EndTime: 75678
+  - StartTime: 76384
+    Lane: 3
+    EndTime: 77090
+  - StartTime: 77795
+    Lane: 2
+    EndTime: 78501
+  - StartTime: 79207
+    Lane: 4
+    EndTime: 79913
+  - StartTime: 80619
+    Lane: 2
+    EndTime: 81325
+  - StartTime: 82031
+    Lane: 4
+    EndTime: 82737
+  - StartTime: 83442
+    Lane: 1
+    EndTime: 84854
+  - StartTime: 84854
+    Lane: 2
+  - StartTime: 85207
+    Lane: 1
+  - StartTime: 85560
+    Lane: 4
+  - StartTime: 85560
+    Lane: 3
+  - StartTime: 85913
+    Lane: 1
+  - StartTime: 86178
+    Lane: 4
+  - StartTime: 86266
+    Lane: 3
+  - StartTime: 86619
+    Lane: 1
+  - StartTime: 86972
+    Lane: 2
+  - StartTime: 86972
+    Lane: 3
+  - StartTime: 87325
+    Lane: 1
+  - StartTime: 87678
+    Lane: 4
+  - StartTime: 88031
+    Lane: 1
+  - StartTime: 88384
+    Lane: 3
+  - StartTime: 88384
+    Lane: 4
+  - StartTime: 88737
+    Lane: 1
+  - StartTime: 88957
+    Lane: 4
+  - StartTime: 89090
+    Lane: 3
+  - StartTime: 89442
+    Lane: 2
+  - StartTime: 89795
+    Lane: 3
+  - StartTime: 89795
+    Lane: 4
+  - StartTime: 90016
+    Lane: 2
+  - StartTime: 90501
+    Lane: 4
+  - StartTime: 90854
+    Lane: 1
+  - StartTime: 91207
+    Lane: 3
+  - StartTime: 91207
+    Lane: 2
+  - StartTime: 91560
+    Lane: 1
+  - StartTime: 91781
+    Lane: 4
+  - StartTime: 91913
+    Lane: 3
+  - StartTime: 92266
+    Lane: 2
+  - StartTime: 92619
+    Lane: 3
+  - StartTime: 92619
+    Lane: 4
+  - StartTime: 92972
+    Lane: 1
+  - StartTime: 93325
+    Lane: 4
+  - StartTime: 93678
+    Lane: 1
+  - StartTime: 94031
+    Lane: 3
+  - StartTime: 94031
+    Lane: 4
+  - StartTime: 94384
+    Lane: 1
+  - StartTime: 94604
+    Lane: 4
+  - StartTime: 94737
+    Lane: 3
+  - StartTime: 95310
+    Lane: 4
+  - StartTime: 95442
+    Lane: 3
+  - StartTime: 95795
+    Lane: 4
+  - StartTime: 96148
+    Lane: 4
+  - StartTime: 96501
+    Lane: 1
+  - StartTime: 96854
+    Lane: 3
+  - StartTime: 96854
+    Lane: 4
+  - StartTime: 97207
+    Lane: 1
+  - StartTime: 97428
+    Lane: 4
+  - StartTime: 97560
+    Lane: 3
+  - StartTime: 97913
+    Lane: 1
+  - StartTime: 98266
+    Lane: 3
+  - StartTime: 98266
+    Lane: 4
+  - StartTime: 98619
+    Lane: 1
+  - StartTime: 98972
+    Lane: 2
+  - StartTime: 98972
+    Lane: 3
+  - StartTime: 99325
+    Lane: 1
+  - StartTime: 99678
+    Lane: 3
+  - StartTime: 99678
+    Lane: 4
+  - StartTime: 100031
+    Lane: 1
+  - StartTime: 100251
+    Lane: 4
+  - StartTime: 100384
+    Lane: 3
+  - StartTime: 100737
+    Lane: 1
+  - StartTime: 101090
+    Lane: 3
+  - StartTime: 101090
+    Lane: 4
+  - StartTime: 101310
+    Lane: 1
+  - StartTime: 101795
+    Lane: 4
+  - StartTime: 102148
+    Lane: 1
+  - StartTime: 102501
+    Lane: 3
+  - StartTime: 102501
+    Lane: 4
+  - StartTime: 102854
+    Lane: 1
+  - StartTime: 103075
+    Lane: 4
+  - StartTime: 103207
+    Lane: 3
+  - StartTime: 103560
+    Lane: 2
+  - StartTime: 103913
+    Lane: 3
+  - StartTime: 103913
+    Lane: 4
+  - StartTime: 104266
+    Lane: 1
+  - StartTime: 104619
+    Lane: 4
+  - StartTime: 104972
+    Lane: 1
+  - StartTime: 105325
+    Lane: 3
+  - StartTime: 105325
+    Lane: 2
+  - StartTime: 105678
+    Lane: 1
+  - StartTime: 105898
+    Lane: 4
+  - StartTime: 106031
+    Lane: 3
+  - StartTime: 106384
+    Lane: 2
+  - StartTime: 106737
+    Lane: 3
+  - StartTime: 106737
+    Lane: 4

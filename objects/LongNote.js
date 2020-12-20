@@ -12,9 +12,9 @@ function drawLongNote(lane, x, y, yEnd) {
 
     const container = new PIXI.Container();
 
-    const end = new PIXI.Sprite.from('skin/longnote/' + noteHoldStart);
-    const body = new PIXI.Sprite.from('skin/longnote/' + noteHoldBody);
     const start = new PIXI.Sprite.from('skin/longnote/' + NoteHoldEnd);
+    const body = new PIXI.Sprite.from('skin/longnote/' + noteHoldBody);
+    const end = new PIXI.Sprite.from('skin/longnote/' + noteHoldStart);
 
     end.width = noteSize.width - (borderSize * 2)
     end.height = noteSize.height;

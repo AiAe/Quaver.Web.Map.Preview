@@ -27,13 +27,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // Check if note is long
         if(object.EndTime !== undefined) {
             const end = object.EndTime  * spacing;
-            const longNote = drawLongNote(object.Lane, positions['lane' + object.Lane], start, end);
-            longNote.visible = false;
+            const longNote = drawLongNote(object.Lane, positions['lane' + (5 - object.Lane)], start, end);
+            longNote.visible = !hideOffscreen;
             notes.push(longNote);
             playField.addChild(longNote);
         } else {
-            const note = drawNote(object.Lane, positions['lane' + object.Lane], start);
-            note.visible = false;
+            const note = drawNote(object.Lane, positions['lane' + (5 - object.Lane)], start);
+            note.visible = !hideOffscreen;
             notes.push(note);
             playField.addChild(note);
         }
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
         for(note of notes) {
             // Render only visible notes
-            if(note.y < window.innerHeight) note.visible = true;
+            if(note.y < window.innerHeight && hideOffscreen) note.visible = true;
             // Delete object when it goes offscreen
             if(note.y < 0 - note.height) {
                 playField.removeChild(note);

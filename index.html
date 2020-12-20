@@ -14,9 +14,7 @@
         canvas {
             display: block;
             margin: 0 auto;
-            /*transform: rotate(180deg);*/
-            /*-webkit-transform: scaleX(-1);*/
-            /*transform: scaleX(-1);*/
+            transform: rotate(180deg);
         }
     </style>
 </head>
@@ -41,7 +39,9 @@
     const scrollSpeed = 6;
     const spacing = 2;
 
-    const longNoteAlpha = 1;
+    const longNoteAlpha = 0.5;
+
+    const hideOffscreen = true;
 </script>
 
 <script src="./plugins/js-yaml.min.js"></script>

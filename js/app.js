@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function (event) {
+    PIXI.utils.skipHello();
+
     let app = new PIXI.Application({
         width: (noteSize.width * 4) - (borderSize * 2),
         height: window.innerHeight,
@@ -19,44 +21,39 @@ document.addEventListener("DOMContentLoaded", function (event) {
     playField.addChild(drawPlayFieldBorders((noteSize.width * 3) - (borderSize * 3), 0));
     playField.addChild(drawPlayFieldBorders((noteSize.width * 4) - (borderSize * 4), 0));
 
-    let notes = [];
+    // Notes container
+    const notes = new PIXI.Container();
 
     // Load all notes
     for (let object of doc.HitObjects) {
-        const start = (object.StartTime) * spacing;
+        const start = (object.StartTime);
         // Check if note is long
         if(object.EndTime !== undefined) {
-            const end = object.EndTime  * spacing;
+            const end = object.EndTime;
             const longNote = drawLongNote(object.Lane, positions['lane' + (5 - object.Lane)], start, end);
-            longNote.visible = !hideOffscreen;
-            notes.push(longNote);
-            playField.addChild(longNote);
+            notes.addChild(longNote);
         } else {
             const note = drawNote(object.Lane, positions['lane' + (5 - object.Lane)], start);
-            note.visible = !hideOffscreen;
-            notes.push(note);
-            playField.addChild(note);
+            notes.addChild(note);
         }
     }
 
+    playField.addChild(notes);
     app.stage.addChild(playField);
 
-    const stopAt = playField.children.length - notes.length;
+    let hPosition = 0;
+
+    // Move container to start time
+    notes.y += doc.TimingPoints[0].StartTime;
 
     app.ticker.add((delta) => {
-        if(playField.children.length <= stopAt) {
+        if(hPosition >= notes.height) {
             app.ticker.stop();
         }
-        for(note of notes) {
-            // Render only visible notes
-            if(note.y < window.innerHeight && hideOffscreen) note.visible = true;
-            // Delete object when it goes offscreen
-            if(note.y < 0 - note.height) {
-                playField.removeChild(note);
-            } else {
-                note.y -= scrollSpeed * delta;
-            }
-        }
+
+        hPosition += scrollSpeed * delta;
+
+        notes.y -= scrollSpeed * delta;
     });
 
     let started = true;

@@ -5,7 +5,7 @@ function drawNote(lane, x, y) {
     } else {
         hitObject = "note-hitobject-2.png";
     }
-    const note = PIXI.Sprite.from('notes/' + hitObject);
+    const note = PIXI.Sprite.from('skin/notes/' + hitObject);
 
     note.width = noteSize.width - (borderSize * 2);
     note.height = noteSize.height;

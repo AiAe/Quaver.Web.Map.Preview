@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     document.body.appendChild(app.view);
 
+    // Vars
+    let hPosition = 0, started = true, oldY = 0, moving = true;
+
     // Create play field container and draw it
     const playField = new PIXI.Container();
     playField.addChild(drawPlayField());
@@ -28,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     for (let object of doc.HitObjects) {
         const start = (object.StartTime) * spacing;
         // Check if note is long
-        if(object.EndTime !== undefined) {
+        if (object.EndTime !== undefined) {
             const end = object.EndTime * spacing;
             const longNote = drawLongNote(object.Lane, positions['lane' + (5 - object.Lane)], start, end);
             notes.addChild(longNote);
@@ -41,30 +44,39 @@ document.addEventListener("DOMContentLoaded", function (event) {
     playField.addChild(notes);
     app.stage.addChild(playField);
 
-    let hPosition = 0;
-
     // Move container to start time
     notes.y += doc.TimingPoints[0].StartTime;
 
     app.ticker.add((delta) => {
-        if(hPosition >= notes.height) {
-            app.ticker.stop();
+        if (started && moving) {
+            hPosition += scrollSpeed * delta;
+            notes.y -= scrollSpeed * delta;
         }
-
-        hPosition += scrollSpeed * delta;
-
-        notes.y -= scrollSpeed * delta;
     });
 
-    let started = true;
+    document.addEventListener('mousedown', e => {
+        moving = !moving;
+        if (!moving) notes.y -= 10;
+    });
+
+    document.addEventListener('mousemove', event => {
+        if (!moving) {
+            if (event.pageY < oldY) {
+                notes.y += 10;
+            } else if (event.pageY > oldY) {
+                notes.y -= 10;
+            }
+            oldY = event.pageY;
+        }
+    });
+
+    window.addEventListener('mouseup', e => {
+        if (!moving) moving = !moving;
+    });
 
     document.addEventListener('keydown', function (key) {
         switch (key.code) {
             case "Space":
-                if(started) {
-                    app.ticker.stop();
-                }
-                else app.ticker.start();
                 started = !started;
                 break;
             case "F3":
@@ -75,6 +87,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 break;
             case "F5":
                 location.reload();
+                break;
+            case "ArrowUp":
+                notes.y += 100;
+                break;
+            case "ArrowDown":
+                notes.y -= 100;
                 break;
         }
         key.preventDefault();

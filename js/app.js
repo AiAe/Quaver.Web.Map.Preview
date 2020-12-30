@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.body.appendChild(app.view);
 
     // Vars
-    let hPosition = 0, started = false, oldY = 0, moving = true;
+    let hPosition = 0, started = true, oldY = 0, moving = true;
 
     // Create play field container and draw it
     const playField = new PIXI.Container();

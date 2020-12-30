@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 notes.y -= 10;
             }
         }
-        oldY = event.pageY;
+        oldY = window.innerHeight - event.pageY;
     });
 
     let ignore = false;

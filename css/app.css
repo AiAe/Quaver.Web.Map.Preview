@@ -5,6 +5,11 @@ body {
     background: #202225;
 }
 
+#quaver {
+    width: 650px;
+    margin: 0 auto;
+}
+
 canvas {
     display: block;
     margin: 0 auto;
@@ -19,6 +24,7 @@ canvas {
     width: 50px;
     height: 99.8%;
     cursor: pointer;
+    transform: rotate(180deg);
 }
 
 #line {

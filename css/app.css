@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #202225;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    transform: rotate(180deg);
+}
+
+.sidebar {
+    background: #000;
+    border: 1px solid #fff;
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    height: 99.8%;
+    cursor: pointer;
+}
+
+#line {
+    background: #fff;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 0;
+}

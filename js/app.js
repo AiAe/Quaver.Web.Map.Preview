@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         type: (!PIXI.utils.isWebGLSupported()) ? "canvas" : "WebGL"
     });
 
-    document.body.appendChild(app.view);
+    document.querySelector("#quaver").appendChild(app.view);
 
     // Vars
     let hPosition = 0, started = true, oldY = 0, moving = true;
@@ -100,7 +100,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     bar.addEventListener('click', event => {
         ignore = true;
         line.style.top = oldY + "px";
-
 
         const scrollTo = scrollableContainer * oldY;
 

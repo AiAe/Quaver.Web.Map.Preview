@@ -23,7 +23,6 @@ function drawLongNote(lane, x, y, yEnd) {
     body.width = noteSize.width - (borderSize * 2)
     body.height = yEnd - y - noteSize.height;
     body.y = noteSize.height;
-    body.alpha = longNoteAlpha;
 
     start.width = noteSize.width - (borderSize * 2)
     start.height = noteSize.height;

@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     document.body.appendChild(app.view);
 
     // Vars
-    let hPosition = 0, started = true, oldY = 0, moving = true;
+    let hPosition = 0, started = false, oldY = 0, moving = true;
 
     // Create play field container and draw it
     const playField = new PIXI.Container();
@@ -51,12 +51,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         if (started && moving) {
             hPosition += scrollSpeed * delta;
             notes.y -= scrollSpeed * delta;
+            line.style.top = Math.abs(notes.y) / scrollableContainer + "px";
         }
-    });
-
-    document.addEventListener('mousedown', e => {
-        moving = !moving;
-        if (!moving) notes.y -= 10;
     });
 
     document.addEventListener('mousemove', event => {
@@ -66,15 +62,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
             } else if (event.pageY > oldY) {
                 notes.y -= 10;
             }
-            oldY = event.pageY;
         }
+        oldY = event.pageY;
     });
 
-    window.addEventListener('mouseup', e => {
-        if (!moving) moving = !moving;
-    });
+    let ignore = false;
 
     document.addEventListener('keydown', function (key) {
+        if(ignore) return;
         switch (key.code) {
             case "Space":
                 started = !started;
@@ -96,5 +91,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 break;
         }
         key.preventDefault();
+    });
+
+    const bar = document.querySelector('#bar');
+    const line = document.querySelector('#line');
+    const scrollableContainer = notes.height / bar.clientHeight;
+
+    bar.addEventListener('click', event => {
+        ignore = true;
+        line.style.top = oldY + "px";
+
+
+        const scrollTo = scrollableContainer * oldY;
+
+        notes.y = -scrollTo;
+        ignore = false;
     });
 });

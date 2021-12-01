@@ -3,8 +3,7 @@ Map Preview
 
 ## ToDo
 1. Implement SVs
-2. Support for 7 Keys
-3. Seek bar map preview
+2. Seek bar map preview
 
 ## Setting Up
 

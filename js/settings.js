@@ -1,11 +1,11 @@
 // Global settings
 
 let borderSize = 2, scrollSpeed = 12, spacing = 3;
-const keys = parseInt(doc.Mode.replace(/Keys/, ''));
+const numLanes = parseInt(doc.Mode.replace(/Keys/, ''));
 
 const noteSize = {
-    width: 512 / keys,
-    height: 192 / keys
+    width: 512 / numLanes,
+    height: 192 / numLanes
 }
 
 const positions = {

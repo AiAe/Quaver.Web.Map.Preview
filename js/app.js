@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     playField.addChild(drawPlayField());
 
     // Draw field borders
-    for (i = 0; i <= numLanes; i++) {
+    for (let i = 0; i <= numLanes; i++) {
         playField.addChild(drawPlayFieldBorders(i * (noteSize.width - borderSize), 0));
     }
 

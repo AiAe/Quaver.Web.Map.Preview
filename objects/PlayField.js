@@ -1,5 +1,5 @@
 function drawPlayField() {
-    const fieldWidth = (noteSize.width) * numLanes;
+    const fieldWidth = (noteSize.width) * numLanes - (numLanes * borderSize);
     let draw = new PIXI.Graphics();
     draw.beginFill(0x000000);
     draw.drawRect(0, 0, fieldWidth, window.innerHeight);

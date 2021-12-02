@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     PIXI.utils.skipHello();
 
     let app = new PIXI.Application({
-        width: (noteSize.width * 4) - (borderSize * 2),
+        width: (noteSize.width * numLanes) - (borderSize * 2),
         height: window.innerHeight,
         transparent: true,
         type: (!PIXI.utils.isWebGLSupported()) ? "canvas" : "WebGL"
@@ -18,11 +18,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     playField.addChild(drawPlayField());
 
     // Draw field borders
-    playField.addChild(drawPlayFieldBorders(0, 0));
-    playField.addChild(drawPlayFieldBorders((noteSize.width) - borderSize, 0));
-    playField.addChild(drawPlayFieldBorders((noteSize.width * 2) - (borderSize * 2), 0));
-    playField.addChild(drawPlayFieldBorders((noteSize.width * 3) - (borderSize * 3), 0));
-    playField.addChild(drawPlayFieldBorders((noteSize.width * 4) - (borderSize * 4), 0));
+    for (i = 0; i <= numLanes; i++) {
+        playField.addChild(drawPlayFieldBorders(i * (noteSize.width - borderSize), 0));
+    }
 
     // Notes container
     const notes = new PIXI.Container();
@@ -33,10 +31,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // Check if note is long
         if (object.EndTime !== undefined) {
             const end = object.EndTime * spacing;
-            const longNote = drawLongNote(object.Lane, positions['lane' + (5 - object.Lane)], start, end);
+            const longNote = drawLongNote(object.Lane, positions['lane' + ((numLanes + 1) - object.Lane)], start, end);
             notes.addChild(longNote);
         } else {
-            const note = drawNote(object.Lane, positions['lane' + (5 - object.Lane)], start);
+            const note = drawNote(object.Lane, positions['lane' + ((numLanes + 1) - object.Lane)], start);
             notes.addChild(note);
         }
     }

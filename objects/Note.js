@@ -1,6 +1,6 @@
 function drawNote(lane, x, y) {
     let hitObject = "";
-    if (lane === 1 || lane === 4) {
+    if ((lane % 2 === 1 && !(numLanes === 4 && lane === 3)) || (numLanes === 4 && lane === 4)) {
         hitObject = "note-hitobject-1.png";
     } else {
         hitObject = "note-hitobject-2.png";

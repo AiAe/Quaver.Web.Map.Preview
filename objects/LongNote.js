@@ -1,6 +1,6 @@
 function drawLongNote(lane, x, y, yEnd) {
     let noteHoldStart, noteHoldBody, NoteHoldEnd;
-    if (lane === 1 || lane === 4) {
+    if ((lane % 2 === 1 && !(numLanes === 4 && lane === 3)) || (numLanes === 4 && lane === 4)) {
         noteHoldStart = "note-holdstart-1.png";
         noteHoldBody = "note-holdbody-1.png";
         NoteHoldEnd = "note-holdend-1.png";
